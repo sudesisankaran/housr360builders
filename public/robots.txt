@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://housr360builders.com/sitemap.xml
