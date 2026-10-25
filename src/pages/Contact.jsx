@@ -6,10 +6,11 @@ import {
   MessageSquare, 
   Sparkles, 
   ArrowUpRight, 
-  ShieldCheck 
+  ShieldCheck,
+  Share2
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
-import { getWhatsAppUrl } from '../utils/whatsapp';
+import { getWhatsAppUrl, getShareAllContactDetailsWhatsAppUrl } from '../utils/whatsapp';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import EnquiryForm from '../components/forms/EnquiryForm';
 
@@ -81,6 +82,17 @@ export default function Contact() {
                   <MessageSquare className="w-4 h-4" />
                   <span>Start WhatsApp Conversation</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+
+                <a
+                  href={getShareAllContactDetailsWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-[#F1D98A] bg-white/5 hover:bg-white/10 border border-[#D4AF37]/30 transition-all"
+                  title="Forward complete company contact card to any WhatsApp contact"
+                >
+                  <Share2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Share All Contact Details to WhatsApp</span>
                 </a>
               </div>
 

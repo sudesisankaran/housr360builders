@@ -1,7 +1,7 @@
 import { siteConfig } from '../config/siteConfig';
 
 /**
- * Generates a clean, encoded wa.me URL for WhatsApp communication.
+ * Generates a clean, encoded wa.me URL for direct WhatsApp communication.
  * @param {string} message - Message text to pre-fill
  * @param {string} customNumber - Optional custom number override
  * @returns {string} wa.me URL
@@ -57,4 +57,47 @@ export function formatEnquiryForWhatsApp(formData) {
   ].filter(Boolean);
 
   return getWhatsAppUrl(lines.join('\n'));
+}
+
+/**
+ * Complete, formatted business contact card text for sharing
+ */
+export function getAllContactDetailsText() {
+  return [
+    `*HOUSR 360 BUILDERS — OFFICIAL CONTACT DETAILS*`,
+    `──────────────────────────────`,
+    `🏛 *Turnkey Construction | 2D/3D Elevations | Interiors*`,
+    ``,
+    `📞 *Contact Numbers:*`,
+    `• Primary / WhatsApp: ${siteConfig.contact.phonePrimary}`,
+    `• Office Line: ${siteConfig.contact.phoneSecondary}`,
+    ``,
+    `📧 *Official Email:*`,
+    `${siteConfig.contact.email}`,
+    ``,
+    `📍 *Office Address:*`,
+    `${siteConfig.contact.address.line1}, ${siteConfig.contact.address.line2}, ${siteConfig.contact.address.city}, ${siteConfig.contact.address.state} — ${siteConfig.contact.address.pincode}`,
+    ``,
+    `🗺 *Google Maps Location:*`,
+    `${siteConfig.contact.address.googleMapsUrl}`,
+    ``,
+    `🌐 *Official Social Profiles:*`,
+    `• Instagram: ${siteConfig.socials.instagram}`,
+    `• YouTube: ${siteConfig.socials.youtube}`,
+    `• Facebook: ${siteConfig.socials.facebook}`,
+    ``,
+    `⏰ *Office Hours:*`,
+    `${siteConfig.contact.businessHours.weekdays}`,
+    `${siteConfig.contact.businessHours.sunday}`,
+    `──────────────────────────────`,
+    `_Housr 360 Builders — Building Dreams. Creating Timeless Spaces._`
+  ].join('\n');
+}
+
+/**
+ * Generates an instant WhatsApp share link to broadcast all company contact details to any chat/contact
+ */
+export function getShareAllContactDetailsWhatsAppUrl() {
+  const text = getAllContactDetailsText();
+  return `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
 }

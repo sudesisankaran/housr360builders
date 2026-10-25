@@ -6,10 +6,11 @@ import {
   Clock, 
   ArrowUpRight, 
   MessageSquare,
-  ShieldCheck
+  ShieldCheck,
+  Share2
 } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
-import { getWhatsAppUrl } from '../../utils/whatsapp';
+import { getWhatsAppUrl, getShareAllContactDetailsWhatsAppUrl } from '../../utils/whatsapp';
 
 // Clean SVG Brand Icons for Social Media
 function InstagramIcon({ className = "w-4 h-4" }) {
@@ -297,6 +298,21 @@ export default function Footer() {
                     {siteConfig.contact.businessHours.sunday}
                   </p>
                 </div>
+              </div>
+
+              {/* Quick Share to WhatsApp */}
+              <div className="pt-2 border-t border-white/5">
+                <a
+                  href={getShareAllContactDetailsWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 text-xs font-semibold transition-all group"
+                  title="Forward complete company contact card to WhatsApp"
+                >
+                  <Share2 className="w-3.5 h-3.5" />
+                  <span>Share Contact Details to WhatsApp</span>
+                  <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
 
             </div>
