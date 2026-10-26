@@ -15,7 +15,7 @@ export const instagramVideos = [
     duration: "0:45",
     reelUrl: "https://www.instagram.com/hosur360builders/reel/DeGjHuazkBU/",
     embedUrl: "https://www.instagram.com/reel/DeGjHuazkBU/embed",
-    thumbnail: "https://images.unsplash.com/photo-1541888946425-d0fbb1861564?q=80&w=800&auto=format&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop",
     caption: "Live on-site civil inspection verifying rebar cover, slab reinforcement, and vibration compaction under senior engineer supervision.",
     highlights: ["Grade Fe550D TMT Rebar", "Slump Cone & Cube Testing", "On-site Civil Engineer Audit"],
     viewsCount: "1.2K+ Views"

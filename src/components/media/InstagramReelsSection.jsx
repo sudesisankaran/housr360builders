@@ -113,6 +113,11 @@ export default function InstagramReelsSection() {
                 <img
                   src={video.thumbnail}
                   alt={video.title}
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop";
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90 group-hover:brightness-100"
                   loading="lazy"
                 />
