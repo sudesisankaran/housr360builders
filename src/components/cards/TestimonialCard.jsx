@@ -42,29 +42,16 @@ export default function TestimonialCard({ testimonial }) {
 
       {/* Author Footer */}
       <div className="pt-4 border-t border-white/5 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <img
-            src={testimonial.avatar}
-            alt={testimonial.clientName}
-            referrerPolicy="no-referrer"
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop";
-            }}
-            className="w-11 h-11 rounded-full object-cover border border-[#A855F7]/40 shadow-sm"
-            loading="lazy"
-          />
-          <div>
-            <div className="flex items-center gap-1.5">
-              <h5 className="font-serif text-xs font-bold text-white">
-                {testimonial.clientName}
-              </h5>
-              {testimonial.isVerified && (
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#A855F7]" title="Verified Client" />
-              )}
-            </div>
-            <p className="text-[11px] text-zinc-400">{testimonial.location}</p>
+        <div>
+          <div className="flex items-center gap-1.5">
+            <h5 className="font-serif text-xs font-bold text-white">
+              {testimonial.clientName}
+            </h5>
+            {testimonial.isVerified && (
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#A855F7]" title="Verified Client" />
+            )}
           </div>
+          <p className="text-[11px] text-zinc-400">{testimonial.location}</p>
         </div>
 
         {/* Project Type Tag */}
