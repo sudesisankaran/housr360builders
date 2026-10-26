@@ -560,7 +560,7 @@ export default function Home() {
 
           {/* Testimonial Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.slice(0, 3).map((item) => (
+            {testimonials.map((item) => (
               <TestimonialCard key={item.id} testimonial={item} />
             ))}
           </div>

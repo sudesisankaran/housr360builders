@@ -49,7 +49,7 @@ export const siteConfig = {
 
   // Verified Business Metrics (Editable factual metrics)
   stats: [
-    { label: "Completed Projects", value: "250+", description: "Bespoke residences & commercial spaces" },
+    { label: "Completed Projects", value: "50+", description: "Bespoke residences & commercial spaces" },
     { label: "Years of Excellence", value: "15+", description: "Continuous architectural mastery" },
     { label: "Client Satisfaction", value: "99%", description: "Verified homeowner satisfaction rate" },
     { label: "Active Project Sites", value: "28+", description: "Supervised with on-site engineering" },

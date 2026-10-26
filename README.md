@@ -136,7 +136,7 @@ export const siteConfig = {
     businessHours: { ... }
   },
   stats: [
-    { label: "Completed Projects", value: "250+", ... },
+    { label: "Completed Projects", value: "50+", ... },
     ...
   ]
 };

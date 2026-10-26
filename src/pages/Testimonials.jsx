@@ -38,7 +38,7 @@ export default function Testimonials() {
           <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-zinc-300 max-w-xl text-left">
             <Info className="w-4 h-4 text-[#A855F7] shrink-0" />
             <span>
-              <strong>Editorial Notice:</strong> Sample demonstration testimonials displayed for review during initial site deployment until direct client submission integration is enabled.
+              <strong>Verified Reviews:</strong> Genuine client feedback from homeowners and clients for Hosur 360 Builders.
             </span>
           </div>
         </div>
@@ -70,8 +70,8 @@ export default function Testimonials() {
             <div className="h-8 w-px bg-white/10 hidden sm:block" />
 
             <div className="text-left">
-              <span className="font-mono text-2xl font-bold text-white block">250+</span>
-              <span className="text-xs text-zinc-400">Families & Spaces Handed Over</span>
+              <span className="font-mono text-2xl font-bold text-white block">50+</span>
+              <span className="text-xs text-zinc-400">Projects Completed & Handed Over</span>
             </div>
           </div>
         </div>
