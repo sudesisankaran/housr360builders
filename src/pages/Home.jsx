@@ -195,7 +195,7 @@ export default function Home() {
       {/* D. TRUST SECTION (Verified factual company metrics) */}
       <section className="relative bg-[#120E22] py-14 border-y border-[#A855F7]/20 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {siteConfig.stats.map((stat, idx) => (
               <div key={idx} className="text-center group p-4 rounded-xl hover:bg-white/5 transition-colors">
                 <span className="font-mono text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#C084FC] block mb-1">

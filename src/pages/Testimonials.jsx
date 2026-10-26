@@ -70,7 +70,7 @@ export default function Testimonials() {
             <div className="h-8 w-px bg-white/10 hidden sm:block" />
 
             <div className="text-left">
-              <span className="font-mono text-2xl font-bold text-white block">50+</span>
+              <span className="font-mono text-2xl font-bold text-white block">5+</span>
               <span className="text-xs text-zinc-400">Projects Completed & Handed Over</span>
             </div>
           </div>

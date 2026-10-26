@@ -10,7 +10,7 @@ export const siteConfig = {
     shortName: "Housr 360",
     tagline: "Building Dreams. Creating Timeless Spaces.",
     subTagline: "Turnkey luxury house construction, contemporary architectural 2D/3D elevations, bespoke interior design, and Vastu-compliant spaces.",
-    establishedYear: 2009,
+    establishedYear: 2018,
   },
 
   // WhatsApp Configuration (International format without '+')
@@ -49,10 +49,9 @@ export const siteConfig = {
 
   // Verified Business Metrics (Editable factual metrics)
   stats: [
-    { label: "Completed Projects", value: "50+", description: "Bespoke residences & commercial spaces" },
-    { label: "Years of Excellence", value: "15+", description: "Continuous architectural mastery" },
+    { label: "Completed Projects", value: "5+", description: "Bespoke residences & commercial spaces" },
+    { label: "Years of Excellence", value: "6+", description: "Continuous architectural mastery" },
     { label: "Client Satisfaction", value: "99%", description: "Verified homeowner satisfaction rate" },
-    { label: "Active Project Sites", value: "28+", description: "Supervised with on-site engineering" },
   ],
 
   // Social Media Channels

@@ -43,8 +43,8 @@ export default function About() {
 
       {/* Verified Metrics Bar */}
       <section className="py-12 bg-[#120E22] border-b border-[#A855F7]/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             {siteConfig.stats.map((stat, idx) => (
               <div key={idx}>
                 <span className="font-mono text-3xl sm:text-4xl font-extrabold text-[#C084FC] block mb-1">
