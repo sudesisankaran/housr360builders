@@ -19,8 +19,9 @@ import ProcessCard from '../components/cards/ProcessCard';
 import ProjectCard from '../components/cards/ProjectCard';
 import LightboxModal from '../components/gallery/LightboxModal';
 
-export default function ServiceDetails() {
-  const { slug } = useParams();
+export default function ServiceDetails({ explicitSlug }) {
+  const { slug: routeSlug } = useParams();
+  const slug = explicitSlug || routeSlug;
   const service = getServiceBySlug(slug);
 
   // Lightbox State for related projects
@@ -57,8 +58,11 @@ export default function ServiceDetails() {
     );
   }
 
-  // Filter projects loosely related to this service
-  const relatedProjectsList = projects.slice(0, 3);
+  // Filter projects related to this service, with fallback to first 3
+  const matchedProjects = service.relatedProjects?.length
+    ? projects.filter(p => service.relatedProjects.includes(p.slug) || service.relatedProjects.includes(p.id))
+    : [];
+  const relatedProjectsList = matchedProjects.length > 0 ? matchedProjects : projects.slice(0, 3);
 
   const handleOpenLightbox = (project) => {
     const allImages = [project.coverImage, ...(project.additionalImages || [])];

@@ -277,7 +277,9 @@ export const projects = [
 ];
 
 export const getProjectBySlug = (slug) => {
-  return projects.find(p => p.slug === slug);
+  if (!slug) return null;
+  const normalized = String(slug).toLowerCase().trim().replace(/^\/+|\/+$/g, '');
+  return projects.find(p => p.slug.toLowerCase() === normalized || p.id.toLowerCase() === normalized) || null;
 };
 
 export const getProjectsByCategory = (category) => {

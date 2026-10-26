@@ -18,8 +18,9 @@ import { getWhatsAppUrl } from '../utils/whatsapp';
 import LightboxModal from '../components/gallery/LightboxModal';
 import ProjectCard from '../components/cards/ProjectCard';
 
-export default function ProjectDetails() {
-  const { slug } = useParams();
+export default function ProjectDetails({ explicitSlug }) {
+  const { slug: routeSlug } = useParams();
+  const slug = explicitSlug || routeSlug;
   const project = getProjectBySlug(slug);
 
   // Lightbox State

@@ -550,5 +550,7 @@ export const services = [
 ];
 
 export const getServiceBySlug = (slug) => {
-  return services.find(s => s.slug === slug);
+  if (!slug) return null;
+  const normalized = String(slug).toLowerCase().trim().replace(/^\/+|\/+$/g, '');
+  return services.find(s => s.slug.toLowerCase() === normalized || s.id.toLowerCase() === normalized) || null;
 };

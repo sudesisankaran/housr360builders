@@ -24,7 +24,7 @@ export default function ServiceCard({ service, index = 0 }) {
   return (
     <div className="group relative bg-[#120E22] rounded-2xl overflow-hidden border border-[#2D2252] hover:border-[#A855F7]/60 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-purple-950/50 flex flex-col justify-between">
       {/* Card Image with subtle zoom */}
-      <div className="relative h-60 overflow-hidden">
+      <Link to={`/services/${service.slug}`} className="relative h-60 overflow-hidden block">
         <img
           src={service.cardImage}
           alt={service.title}
@@ -44,14 +44,16 @@ export default function ServiceCard({ service, index = 0 }) {
         <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-[#0A0713]/80 backdrop-blur-md border border-white/10 flex items-center justify-center text-[#C084FC] group-hover:bg-[#A855F7] group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-950/40">
           <IconComponent className="w-5 h-5" />
         </div>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
-          <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#DDD6FE] transition-colors mb-2">
-            {service.title}
-          </h3>
+          <Link to={`/services/${service.slug}`} className="block">
+            <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#DDD6FE] transition-colors mb-2">
+              {service.title}
+            </h3>
+          </Link>
           <p className="text-xs text-zinc-300 line-clamp-3 leading-relaxed mb-4">
             {service.shortDescription}
           </p>
