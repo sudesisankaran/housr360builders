@@ -69,7 +69,7 @@ export default function LightboxModal({
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col">
-            <span className="font-serif text-sm sm:text-base font-semibold text-[#F1D98A]">
+            <span className="font-serif text-sm sm:text-base font-semibold text-[#DDD6FE]">
               {title || 'Architectural Gallery'}
             </span>
             <span className="text-xs text-[#888888]">
@@ -79,7 +79,7 @@ export default function LightboxModal({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-[#111111] transition-all text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+            className="p-2 rounded-full bg-white/10 hover:bg-[#A855F7] hover:text-white transition-all text-white focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
             aria-label="Close lightbox modal (Press Escape)"
           >
             <X className="w-5 h-5" />
@@ -93,7 +93,7 @@ export default function LightboxModal({
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-[#111111] text-white transition-all z-50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#A855F7] hover:text-white text-white transition-all z-50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
             aria-label="Previous image (Left arrow)"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -123,7 +123,7 @@ export default function LightboxModal({
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-[#111111] text-white transition-all z-50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#A855F7] hover:text-white text-white transition-all z-50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#A855F7]"
             aria-label="Next image (Right arrow)"
           >
             <ChevronRight className="w-6 h-6" />

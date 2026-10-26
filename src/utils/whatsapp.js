@@ -60,6 +60,14 @@ export function formatEnquiryForWhatsApp(formData) {
 }
 
 /**
+ * Convenience alias for EnquiryForm WhatsApp URL generation
+ */
+export function getEnquirySubmissionWhatsAppUrl(formData) {
+  return formatEnquiryForWhatsApp(formData);
+}
+
+
+/**
  * Complete, formatted business contact card text for sharing
  */
 export function getAllContactDetailsText() {

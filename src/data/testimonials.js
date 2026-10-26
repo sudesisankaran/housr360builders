@@ -7,7 +7,7 @@ export const testimonials = [
   {
     id: "test-1",
     clientName: "Vikram & Ananya Reddy",
-    location: "Jubilee Hills, Hyderabad",
+    location: "Rayakottai Road, Hosur",
     projectType: "Turnkey Luxury Villa Construction",
     projectSlug: "the-monolith-villa",
     rating: 5,
@@ -20,7 +20,7 @@ export const testimonials = [
   {
     id: "test-2",
     clientName: "Dr. Rajesh & Shobha Sharma",
-    location: "Kokapet, Hyderabad",
+    location: "Sarjapur Road, Bengaluru",
     projectType: "Vastu Architecture & Construction",
     projectSlug: "emerald-sanctuary",
     rating: 5,
@@ -33,7 +33,7 @@ export const testimonials = [
   {
     id: "test-3",
     clientName: "Sanjay Singhal",
-    location: "Financial District, Hyderabad",
+    location: "Electronic City, Bengaluru",
     projectType: "Commercial Building & Glazed Facade",
     projectSlug: "apex-business-hub",
     rating: 5,
@@ -46,7 +46,7 @@ export const testimonials = [
   {
     id: "test-4",
     clientName: "Pooja & Kamesh Iyer",
-    location: "Banjara Hills, Hyderabad",
+    location: "Bagalur Road, Hosur",
     projectType: "Bespoke Penthouse Interior Design",
     projectSlug: "velvet-ridge-interiors",
     rating: 5,
@@ -59,7 +59,7 @@ export const testimonials = [
   {
     id: "test-5",
     clientName: "Col. K. V. Rao (Retd.)",
-    location: "Sainikpuri, Secunderabad",
+    location: "Anthivadi, Hosur",
     projectType: "Complete Structural Renovation",
     projectSlug: "heritage-revival-residence",
     rating: 5,

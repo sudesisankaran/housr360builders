@@ -45,10 +45,6 @@ export const siteConfig = {
   serviceLocations: [
     "Hosur",
     "Bengaluru",
-    "Hyderabad",
-    "Chennai",
-    "Coimbatore",
-    "Salem",
   ],
 
   // Verified Business Metrics (Editable factual metrics)

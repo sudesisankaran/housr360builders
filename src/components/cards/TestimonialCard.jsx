@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function TestimonialCard({ testimonial }) {
   return (
-    <div className="bg-[#161616] rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-[#D4AF37]/40 transition-all duration-300 shadow-xl flex flex-col justify-between relative group">
-      {/* Decorative Gold Quote Icon */}
-      <div className="absolute top-6 right-6 text-[#D4AF37]/15 group-hover:text-[#D4AF37]/30 transition-colors pointer-events-none">
+    <div className="bg-[#120E22] rounded-2xl p-6 sm:p-7 border border-[#2D2252] hover:border-[#A855F7]/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-purple-950/40 flex flex-col justify-between relative group">
+      {/* Decorative Violet Quote Icon */}
+      <div className="absolute top-6 right-6 text-[#A855F7]/15 group-hover:text-[#A855F7]/30 transition-colors pointer-events-none">
         <Quote className="w-10 h-10" />
       </div>
 
@@ -13,9 +13,9 @@ export default function TestimonialCard({ testimonial }) {
         {/* Rating Stars */}
         <div className="flex items-center gap-1 mb-4">
           {[...Array(testimonial.rating || 5)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
+            <Star key={i} className="w-4 h-4 fill-[#A855F7] text-[#A855F7]" />
           ))}
-          <span className="ml-2 text-xs font-semibold text-[#F1D98A]">5.0</span>
+          <span className="ml-2 text-xs font-semibold text-[#DDD6FE]">5.0</span>
         </div>
 
         {/* Highlight Headline */}
@@ -26,7 +26,7 @@ export default function TestimonialCard({ testimonial }) {
         )}
 
         {/* Quote Body */}
-        <p className="text-xs sm:text-sm text-[#A8A8A8] leading-relaxed italic mb-6">
+        <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed italic mb-6">
           "{testimonial.quote}"
         </p>
       </div>
@@ -37,7 +37,7 @@ export default function TestimonialCard({ testimonial }) {
           <img
             src={testimonial.avatar}
             alt={testimonial.clientName}
-            className="w-11 h-11 rounded-full object-cover border border-[#D4AF37]/40"
+            className="w-11 h-11 rounded-full object-cover border border-[#A855F7]/40 shadow-sm"
             loading="lazy"
           />
           <div>
@@ -46,10 +46,10 @@ export default function TestimonialCard({ testimonial }) {
                 {testimonial.clientName}
               </h5>
               {testimonial.isVerified && (
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" title="Verified Client" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#A855F7]" title="Verified Client" />
               )}
             </div>
-            <p className="text-[11px] text-[#777777]">{testimonial.location}</p>
+            <p className="text-[11px] text-zinc-400">{testimonial.location}</p>
           </div>
         </div>
 
@@ -57,12 +57,12 @@ export default function TestimonialCard({ testimonial }) {
         {testimonial.projectSlug ? (
           <Link
             to={`/projects/${testimonial.projectSlug}`}
-            className="hidden sm:inline-block text-[10px] text-[#D4AF37] hover:underline"
+            className="hidden sm:inline-block text-[10px] text-[#C084FC] hover:underline"
           >
             {testimonial.projectType}
           </Link>
         ) : (
-          <span className="hidden sm:inline-block text-[10px] text-[#777777]">
+          <span className="hidden sm:inline-block text-[10px] text-zinc-500">
             {testimonial.projectType}
           </span>
         )}

@@ -1,18 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-dark: #111111;
-  --color-secondary-dark: #1A1A1A;
-  --color-card-dark: #161616;
-  --color-card-border: #2A2A2A;
-  --color-gold: #D4AF37;
-  --color-gold-light: #F1D98A;
-  --color-gold-dark: #9E8120;
+  --color-primary-dark: #0A0713;
+  --color-secondary-dark: #120E22;
+  --color-card-dark: #17122C;
+  --color-card-border: #2D2252;
+  
+  /* Purple & Violet Architectural Palette */
+  --color-purple-primary: #A855F7;
+  --color-purple-light: #DDD6FE;
+  --color-purple-dark: #7C3AED;
+  --color-violet-deep: #581C87;
+  
+  /* Fallback aliases for existing gold tokens */
+  --color-gold: #A855F7;
+  --color-gold-light: #DDD6FE;
+  --color-gold-dark: #7C3AED;
+  
   --color-text-main: #FFFFFF;
-  --color-text-muted: #B8B8B8;
-  --color-light-bg: #F6F4EF;
+  --color-text-muted: #B8B2D0;
+  --color-light-bg: #F8F6FD;
   --color-light-card: #FFFFFF;
-  --color-light-text: #1A1A1A;
+  --color-light-text: #120E22;
 
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -20,11 +29,11 @@
 
 @layer base {
   * {
-    border-color: #262626;
+    border-color: #2D2252;
   }
 
   body {
-    background-color: #111111;
+    background-color: #0A0713;
     color: #FFFFFF;
     font-family: var(--font-sans);
     line-height: 1.6;
@@ -36,53 +45,59 @@
   }
 }
 
-/* Custom architectural utilities */
-.gold-gradient-text {
-  background: linear-gradient(135deg, #F1D98A 0%, #D4AF37 50%, #E6CA65 100%);
+/* Custom architectural utilities with Purple & Violet Aesthetics */
+.gold-gradient-text,
+.purple-gradient-text,
+.violet-gradient-text {
+  background: linear-gradient(135deg, #DDD6FE 0%, #C084FC 40%, #A855F7 75%, #7C3AED 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-border-glow {
-  border: 1px solid rgba(212, 175, 55, 0.3);
+.gold-border-glow,
+.purple-border-glow,
+.violet-border-glow {
+  border: 1px solid rgba(168, 85, 247, 0.35);
   transition: all 0.3s ease;
 }
 
-.gold-border-glow:hover {
-  border-color: rgba(212, 175, 55, 0.7);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+.gold-border-glow:hover,
+.purple-border-glow:hover,
+.violet-border-glow:hover {
+  border-color: rgba(168, 85, 247, 0.85);
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.3);
 }
 
 .architectural-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
 }
 
 .architectural-blueprint-grid {
   background-size: 24px 24px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
 }
 
-/* Custom Scrollbar */
+/* Custom Purple-Themed Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: #0A0713;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #2D2252;
   border-radius: 4px;
-  border: 2px solid #111111;
+  border: 2px solid #0A0713;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #A855F7;
 }

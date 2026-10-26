@@ -22,7 +22,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-[#111111] text-white selection:bg-[#D4AF37]/30 selection:text-[#F1D98A]">
+      <div className="flex flex-col min-h-screen bg-[#0A0713] text-white selection:bg-[#A855F7]/30 selection:text-[#DDD6FE]">
         {/* Scroll restoration & back to top */}
         <ScrollToTop />
 

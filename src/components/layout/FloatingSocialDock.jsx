@@ -70,9 +70,9 @@ export default function FloatingSocialDock({ customMessage = null }) {
       label: `Call ${siteConfig.contact.phonePrimary}`,
       url: `tel:${cleanPhone}`,
       icon: PhoneCallIcon,
-      bgClass: 'bg-[#181818] text-[#F1D98A] hover:bg-[#D4AF37] hover:text-[#111111]',
-      borderClass: 'border-[#D4AF37]/50 hover:border-[#D4AF37]',
-      tooltipColor: 'text-[#F1D98A]',
+      bgClass: 'bg-[#17122C] text-[#DDD6FE] hover:bg-[#A855F7] hover:text-white',
+      borderClass: 'border-[#A855F7]/50 hover:border-[#A855F7]',
+      tooltipColor: 'text-[#DDD6FE]',
       isExternal: false,
     },
     {
@@ -167,7 +167,7 @@ export default function FloatingSocialDock({ customMessage = null }) {
               {...(item.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
-              className={`relative p-3 rounded-full shadow-2xl border transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] flex items-center justify-center backdrop-blur-md ${item.bgClass} ${item.borderClass}`}
+              className={`relative p-3 rounded-full shadow-2xl border transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#A855F7] flex items-center justify-center backdrop-blur-md ${item.bgClass} ${item.borderClass}`}
               aria-label={item.label}
             >
               {/* Optional Subtle Pulse for WhatsApp flagship */}
@@ -177,9 +177,9 @@ export default function FloatingSocialDock({ customMessage = null }) {
 
               <IconComponent className="w-5 h-5 relative z-10" />
 
-              {/* Gold status dot for WhatsApp */}
+              {/* Violet status dot for WhatsApp */}
               {item.isPrimary && (
-                <span className="absolute top-0.5 right-0.5 w-2.5 h-2.5 bg-[#F1D98A] border-2 border-[#111111] rounded-full z-20" />
+                <span className="absolute top-0.5 right-0.5 w-2.5 h-2.5 bg-[#C084FC] border-2 border-[#0A0713] rounded-full z-20" />
               )}
             </a>
           </div>

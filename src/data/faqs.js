@@ -22,7 +22,7 @@ export const faqs = [
   {
     category: "Project Locations",
     question: "In which cities does Housr 360 Builders operate?",
-    answer: "We actively construct and supervise projects in Hyderabad, Bengaluru, Visakhapatnam, Vijayawada, Chennai, and Amaravati. For architectural 2D/3D designs and Vastu consultancy, we serve clients globally across India and the NRI diaspora."
+    answer: "We actively construct and supervise turnkey projects exclusively in Hosur and Bengaluru (Bangalore). For architectural 2D floor plans, 3D elevations, and Vastu consultations, our studio also consults with homeowners across the Hosur–Bengaluru corridor and NRI clients planning builds in this region."
   },
   {
     category: "Renovation & Retrofitting",

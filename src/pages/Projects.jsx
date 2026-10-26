@@ -6,7 +6,7 @@ import ProjectCard from '../components/cards/ProjectCard';
 import LightboxModal from '../components/gallery/LightboxModal';
 
 export default function Projects() {
-  useDocumentTitle('Projects Portfolio | Architectural Gallery', 'Explore our portfolio of luxury residential villas, contemporary commercial landmarks, and bespoke interior transformations.');
+  useDocumentTitle('Projects Portfolio | Hosur & Bengaluru', 'Explore our portfolio of luxury residential villas, contemporary commercial landmarks, and bespoke interior transformations in Hosur and Bengaluru.');
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,26 +45,28 @@ export default function Projects() {
   };
 
   return (
-    <div className="bg-[#111111] text-white">
+    <div className="bg-[#0A0713] text-white min-h-screen">
       
       {/* Portfolio Header */}
-      <section className="relative py-24 sm:py-32 bg-[#141414] border-b border-white/5 overflow-hidden">
+      <section className="relative py-24 sm:py-32 bg-[#120E22] border-b border-[#A855F7]/20 overflow-hidden">
         <div className="absolute inset-0 architectural-grid opacity-25 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
+
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#D4AF37]/40 text-xs text-[#F1D98A] font-medium mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span>Architectural Showcase</span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#17122C] border border-[#A855F7]/40 text-xs text-[#DDD6FE] font-medium mb-6">
+            <Sparkles className="w-3.5 h-3.5 text-[#A855F7]" />
+            <span>Architectural Showcase • Hosur & Bengaluru</span>
           </span>
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
             Landmark Residences & Commercial Spaces
           </h1>
-          <p className="text-base sm:text-lg text-[#CCCCCC] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
             A visual documentation of structural balance, material tactility, and contemporary aesthetics across our residential, commercial, and interior disciplines.
           </p>
 
           {/* Factual Disclaimer Banner */}
-          <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-[#AAAAAA] max-w-xl text-left">
-            <Info className="w-4 h-4 text-[#D4AF37] shrink-0" />
+          <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-zinc-300 max-w-xl text-left">
+            <Info className="w-4 h-4 text-[#A855F7] shrink-0" />
             <span>
               <strong>Demonstration Portfolio Notice:</strong> These projects represent architectural prototypes and demonstration concepts illustrating our capability until genuine client archives are attached.
             </span>
@@ -73,7 +75,7 @@ export default function Projects() {
       </section>
 
       {/* Filter and Search Bar */}
-      <section className="sticky top-[73px] z-30 bg-[#161616]/95 backdrop-blur-md border-b border-white/10 py-4 shadow-lg">
+      <section className="sticky top-[73px] z-30 bg-[#120E22]/95 backdrop-blur-md border-b border-[#A855F7]/20 py-4 shadow-lg shadow-purple-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             
@@ -85,8 +87,8 @@ export default function Projects() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                     selectedCategory === cat
-                      ? 'bg-[#D4AF37] text-[#111111] shadow-lg shadow-[#D4AF37]/20'
-                      : 'bg-[#1F1F1F] text-[#CCCCCC] hover:text-white hover:bg-white/10 border border-white/5'
+                      ? 'bg-gradient-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg shadow-purple-900/40'
+                      : 'bg-[#17122C] text-zinc-300 hover:text-white hover:bg-white/10 border border-white/5'
                   }`}
                 >
                   {cat}
@@ -96,18 +98,18 @@ export default function Projects() {
 
             {/* Keyword Search Input */}
             <div className="relative w-full md:w-72">
-              <Search className="w-4 h-4 text-[#777777] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search projects by city or name..."
-                className="w-full bg-[#1A1A1A] border border-white/10 focus:border-[#D4AF37] rounded-full pl-10 pr-4 py-2 text-xs text-white placeholder-[#666666] focus:outline-none transition-all"
+                className="w-full bg-[#0A0713] border border-white/10 focus:border-[#A855F7] rounded-full pl-10 pr-4 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none transition-all"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#888888] hover:text-white"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400 hover:text-white"
                 >
                   Clear
                 </button>
@@ -119,14 +121,14 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid Section */}
-      <section className="py-20">
+      <section className="py-20 bg-[#0A0713]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {filteredProjects.length === 0 ? (
-            <div className="py-24 text-center space-y-4 bg-[#141414] rounded-3xl border border-white/5 p-8 max-w-lg mx-auto">
-              <SlidersHorizontal className="w-12 h-12 text-[#666666] mx-auto" />
+            <div className="py-24 text-center space-y-4 bg-[#120E22] rounded-3xl border border-white/5 p-8 max-w-lg mx-auto">
+              <SlidersHorizontal className="w-12 h-12 text-zinc-500 mx-auto" />
               <h3 className="font-serif text-xl font-bold text-white">No Matching Projects Found</h3>
-              <p className="text-xs text-[#888888]">
+              <p className="text-xs text-zinc-400">
                 We couldn't find any projects matching your search query or selected category filter.
               </p>
               <button
@@ -134,7 +136,7 @@ export default function Projects() {
                   setSelectedCategory('All');
                   setSearchQuery('');
                 }}
-                className="px-5 py-2 rounded-full text-xs font-semibold text-[#111111] bg-[#D4AF37] hover:bg-[#F1D98A] transition-colors"
+                className="px-5 py-2 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-[#7C3AED] to-[#A855F7] hover:brightness-110 transition-colors shadow-md shadow-purple-900/40"
               >
                 Reset All Filters
               </button>
